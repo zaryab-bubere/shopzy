@@ -252,7 +252,7 @@
             <div class="row">
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
-                    <p> Timothy Donald Cook joined Apple in March 1998. Cook is an American business 
+                    <p> Timothy Donald Cook joined Apple in March 1998. Cook is an American business
                         executive who has been the chief executive officer of Apple Inc. since 2011. </p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -266,7 +266,7 @@
                 </div>
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
-                    <p> Zaryab Bubere (born 2001) is a Indian Engineer. In 2020 Zaryab completed Diploma 
+                    <p> Zaryab Bubere (born 2001) is a Indian Engineer. In 2020 Zaryab completed Diploma
                         form Mumbai University. In 2023 Zaryab became a full stack developer. </p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -280,7 +280,7 @@
                 </div>
                 <div class="col-3">
                     <i class="fa fa-quote-left"></i>
-                    <p> Lei Jun is a Chinese billionaire entrepreneur who founded Xiaomi, one of the largest 
+                    <p> Lei Jun is a Chinese billionaire entrepreneur who founded Xiaomi, one of the largest
                         smartphone and consumer electronics companies in the world </p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
@@ -365,6 +365,18 @@
 
     <script>
         var MenuItems = document.getElementById("MenuItems");
+
+        function checkscreen(x) {
+            if (x.matches) {
+                MenuItems.style.maxHeight = "0px";
+            }
+            else {
+                MenuItems.style.maxHeight = "200px";
+            }
+        }
+        var x = window.matchMedia("(max-width: 800px)")
+        checkscreen(x)
+        x.addListener(checkscreen);
 
         function menutoggle() {
             if (MenuItems.style.maxHeight == "0px") {

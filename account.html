@@ -114,7 +114,15 @@
 
     <script>
         var MenuItems = document.getElementById("MenuItems");
-        MenuItems.style.maxHeight = "0px";
+
+        function checkscreen(x) {
+            if (x.matches) {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+        var x = window.matchMedia("(max-width: 800px)")
+        checkscreen(x)
+        x.addListener(checkscreen);
 
         function menutoggle() {
             if (MenuItems.style.maxHeight == "0px") {
